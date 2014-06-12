@@ -31,7 +31,7 @@ namespace MenuPin.MenuProvider
             var pinMenuItemCMS = new PinMenuItem(
                             "<span class=\"epi-iconPin\"></span>", 
                             "/global/cms/edit",
-                            "javascript: if (dojo.cookie('menupin') == 'true') { dojo.cookie('menupin', 'false'); } else { dojo.cookie('menupin', 'true', { expires: 365 }); } ; document.location.reload(true);",
+                            "javascript: if (dojo.cookie('menupin') == 'true') { dojo.cookie('menupin', 'false', { path: '/' }); } else { dojo.cookie('menupin', 'true', { expires: 365, path: '/' }); } ; document.location.reload(true);",
                             uiUrl
                             );
             pinMenuItemCMS.Alignment = MenuItemAlignment.Right;

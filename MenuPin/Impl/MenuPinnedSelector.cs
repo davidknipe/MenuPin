@@ -10,10 +10,21 @@ namespace MenuPin.Impl
 {
     public class MenuPinnedSelector : IMenuPinnedSelector
     {
+        private HttpContextBase _httpContext;
+
+        public MenuPinnedSelector(HttpContextBase context)
+        {
+            this._httpContext = context;
+        }
+
         public bool IsMenuPinned(string associatedUIUrl)
         {
+            var urlWithOutSlash = associatedUIUrl.TrimStart("~".ToCharArray()).TrimEnd("/".ToCharArray()).ToLower();
+            var urlWithSlash = urlWithOutSlash + "/";
+            var rawUrl = _httpContext.Request.RawUrl.ToLower();
+
             //Only show as selected if we are looking at a URL that supports the pull down menu
-            if (HttpContext.Current.Request.RawUrl.ToLower().Equals(associatedUIUrl.ToLower()))
+            if (rawUrl.Equals(urlWithOutSlash) || rawUrl.Equals(urlWithSlash))
             {
                 return this.IsMenuPinned();
             }
@@ -24,7 +35,7 @@ namespace MenuPin.Impl
         }
         private bool IsMenuPinned()
         {
-            return HttpContext.Current.Request.Cookies["menupin"] != null && HttpContext.Current.Request.Cookies["menupin"].Value == "true";
+            return _httpContext.Request.Cookies["menupin"] != null && _httpContext.Request.Cookies["menupin"].Value == "true";
         }
     }
 }
