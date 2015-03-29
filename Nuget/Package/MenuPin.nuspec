@@ -2,17 +2,18 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>MenuPin</id>
-    <version>1.0.0</version>
+    <version>2.0.0</version>
     <authors>David Knipe</authors>
     <owners>David Knipe</owners>
     <licenseUrl>https://github.com/davidknipe/MenuPin/blob/master/LICENSE.md</licenseUrl>
     <projectUrl>http://www.david-tec.com/2014/06/MenuPin-for-EPiServer-75/</projectUrl>
-   	<iconUrl>data:image/png;base64,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</iconUrl>
+   	<iconUrl>http://www.david-tec.com/global/media/menupin/menupinnugeticon.png?v=2.0</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>MenuPin for EPiServer 7.5 allows users to pin the sliding menu in the EPIServer edit mode UI</description>
-    <tags>EPiServerModulePackage EPiServer MenuPin</tags>
+    <description>MenuPin for EPiServer 8 allows users to pin the sliding menu in the EPIServer edit mode</description>
+    <releaseNotes>v2.0 is a compatibility release for EPiServer 8 upwards</releaseNotes>
+    <tags>EPiServer MenuPin</tags>
     <dependencies>
-      <dependency id="EPiServer.Shell.UI" version="[7.6.0, 8.0)" />
+      <dependency id="EPiServer.CMS.UI" version="[8.0, 9.0)" />
     </dependencies>
   </metadata>
 </package>
