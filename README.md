@@ -1,5 +1,5 @@
-MenuPin
-=======
+MenuPin for EPiServer
+=====================
 
 MenuPin for EPiServer 7.5 and EPiServer 8
 
