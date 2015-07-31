@@ -1,17 +1,6 @@
-﻿using EPiServer.Configuration;
-using EPiServer.ServiceLocation;
+﻿using EPiServer.ServiceLocation;
 using EPiServer.Shell.Navigation;
-using MenuPin.Impl;
-using MenuPin.Interface;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web;
-using System.Web.Mvc;
-using System.Web.Routing;
-using EPiServer.Shell.Web.UI;
 
 namespace MenuPin.MenuProvider
 {
@@ -28,11 +17,10 @@ namespace MenuPin.MenuProvider
         {
             var uiUrl = EPiServer.Configuration.Settings.Instance.UIUrl.OriginalString.TrimStart("~".ToCharArray()).TrimEnd("/".ToCharArray());
 
-            var pinMenuItemCMS = new PinMenuItem(
-                            "<span class=\"epi-iconPin\"></span>", 
+            var pinMenuItemCMS = new UrlMenuItem(
+                            "<span class=\"epi-iconPin\" id=\"menuPin\"></span>", 
                             "/global/cms/edit",
-                            "javascript: if (dojo.cookie('menupin') == 'true') { dojo.cookie('menupin', 'false', { path: '/' }); } else { dojo.cookie('menupin', 'true', { expires: 365, path: '/' }); } ; document.location.reload(true);",
-                            uiUrl
+                            "javascript: require(['dojo/topic'], function(topic){ topic.publish('/menupin/pinclicked'); }); "
                             );
             pinMenuItemCMS.Alignment = MenuItemAlignment.Right;
 

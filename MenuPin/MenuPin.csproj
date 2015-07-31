@@ -179,11 +179,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomBootstrapper.cs" />
-    <Compile Include="Impl\PinMenuItem.cs" />
-    <Compile Include="Interface\IMenuPinnedSelector.cs" />
-    <Compile Include="Impl\MenuPinnedSelector.cs" />
-    <Compile Include="Initialization\MenuPinInit.cs" />
     <Compile Include="MenuProvider\AddPinToMenu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -191,7 +186,9 @@
     <None Include="module.config.transform" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Impl\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="ClientResources\Scripts\MenuPin\MenuPinInit.js" />
   </ItemGroup>
