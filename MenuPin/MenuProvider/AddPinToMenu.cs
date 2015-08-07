@@ -20,7 +20,7 @@ namespace MenuPin.MenuProvider
             var pinMenuItemCMS = new UrlMenuItem(
                             "<span class=\"epi-iconPin\" id=\"menuPin\"></span>", 
                             "/global/cms/edit",
-                            "javascript: require(['dojo/topic'], function(topic){ topic.publish('/menupin/pinclicked'); }); "
+                            "javascript: return;"
                             );
             pinMenuItemCMS.Alignment = MenuItemAlignment.Right;
 

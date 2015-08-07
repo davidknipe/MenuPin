@@ -8,6 +8,7 @@
      "dojo/dom-class",
      "dojo/dom-style",
      "dojo/aspect",
+     "dojo/on",
      "dijit/registry"],
     function (
         declare,
@@ -19,6 +20,7 @@
         domClass,
         domStyle,
         aspect,
+        on,
         registry) {
 
         return declare([], {
@@ -66,6 +68,11 @@
                 if (this._isMenuPinned()) {
                     this._pinMenu();
                 }
+
+                on(this.menuPinButton.parentNode, "click", function (e) {
+                    topic.publish("/menupin/pinclicked");
+                });
+
             },
             _pinClicked: function () {
                 if (this._isMenuPinned()) {
@@ -76,6 +83,14 @@
             },
 
             _unpinMenu: function () {
+
+                // Make sure the main content container is a height of 100%
+                var root = registry.byId("rootContainer");
+                var newHeight = "100%";
+                domStyle.set(root.domNode, "height", newHeight);
+                root.resize();
+
+                this.globalMenu.shadowClass = "epi-globalNavigation--shadow";
 
                 // Toggle the cookie to be set or unset
                 this._toggleCookie(false);
@@ -91,6 +106,7 @@
 
                 // Show the hint button
                 domStyle.set(this._getHintButton(), "display", "block");
+
             },
 
             _pinMenu: function () {
@@ -110,8 +126,17 @@
                 // Remove the shadow effect
                 domClass.remove(this.globalMenu.domNode, this.globalMenu.shadowClass);
 
+                // Stop the shadow getting re-added
+                this.globalMenu.shadowClass = "menupin--noshadow";
+
                 //Hide the hint button
                 domStyle.set(this._getHintButton(), "display", "none");
+
+                // Make sure the main content container is 100% high minus the height of the menu
+                var root = registry.byId("rootContainer");
+                var newHeight = "calc(100% - " + this.globalMenu._getContentHeight() + "px)";
+                domStyle.set(root.domNode, "height", newHeight);
+                root.resize();
             },
 
             _getHintButton: function () {
