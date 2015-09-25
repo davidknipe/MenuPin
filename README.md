@@ -1,7 +1,7 @@
 MenuPin for EPiServer
 =====================
 
-MenuPin for EPiServer 7.5 and EPiServer 8
+MenuPin for EPiServer 7.5, EPiServer 8 and EPiServer 9
 
 More information:
 
