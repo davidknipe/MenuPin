@@ -9,7 +9,7 @@
     <authors>David Knipe</authors>
     <owners>David Knipe</owners>
     <licenseUrl>https://github.com/davidknipe/MenuPin/blob/master/LICENSE.md</licenseUrl>
-    <projectUrl>http://www.david-tec.com/2015/03/menupin-for-episerver-8-released/</projectUrl>
+    <projectUrl>http://www.david-tec.com/2015/09/menupin-for-episerver-9-released/</projectUrl>
    	<iconUrl>http://www.david-tec.com/global/media/menupin/menupinnugeticon.png?v=3.0.0</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <tags>EPiServer MenuPin</tags>
