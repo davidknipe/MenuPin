@@ -10,6 +10,7 @@
      "dojo/aspect",
      "dojo/on",
      "dojo/_base/event",
+     "dojox/gesture/tap",
      "dijit/registry",
      "epi/dependency"
     ],
@@ -25,6 +26,7 @@
         aspect,
         on,
         event,
+        tap,
         registry,
         dependency
         ) {
@@ -55,6 +57,7 @@
                 this.globalMenu = registry.byId("globalMenuContainer");
 
                 topic.subscribe("/menupin/pinclicked", lang.hitch(this, "_pinClicked"));
+                topic.subscribe("/menupin/pinheld", lang.hitch(this, "_pinHeld"));
 
                 // Ensure the menu does not hide if the menu is pinned
                 aspect.around(this.globalMenu, "_hideMenu",
@@ -71,7 +74,6 @@
                     }
                 );
 
-
                 this._profile = dependency.resolve("epi.shell.Profile");
 
                 // Pin out the menu if needed
@@ -83,7 +85,23 @@
                     topic.publish("/menupin/pinclicked");
                     event.stop(e);
                 });
+
+                on(this.menuPinButton.parentNode, tap.hold, function (e) {
+                    topic.publish("/menupin/pinheld");
+                    event.stop(e);
+                });
             },
+
+            _pinHeld: function () {
+                if (this._isMenuPinned()) {
+
+                    topic.publish("/epi/layout/pinnable/navigation/toggle", false);
+                    topic.publish("/epi/layout/pinnable/tools/toggle", false);
+
+                    this._unpinMenu();
+                }
+            },
+
             _pinClicked: function () {
                 if (this._isMenuPinned()) {
                     this._unpinMenu();
