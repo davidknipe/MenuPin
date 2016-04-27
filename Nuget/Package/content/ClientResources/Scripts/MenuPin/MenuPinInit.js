@@ -42,6 +42,12 @@
 
                 this.inherited(arguments);
 
+                // The context changes after the UI has been loaded so we can be sure that registry contains the global meny container
+                _initHandle = topic.subscribe("/epi/shell/context/current", lang.hitch(this, "_onContextCurrent"));
+            },
+
+            _onContextCurrent: function (ctx) {
+                -_initHandle.remove();
                 this._init();
             },
 
