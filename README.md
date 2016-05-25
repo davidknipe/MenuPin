@@ -1,3 +1,5 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/a825j3kk4pe4pnyp?svg=true)](https://ci.appveyor.com/project/davidknipe/menupin)
+
 MenuPin for EPiServer
 =====================
 
