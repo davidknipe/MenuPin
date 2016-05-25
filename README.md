@@ -1,4 +1,3 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/a825j3kk4pe4pnyp?svg=true)](https://ci.appveyor.com/project/davidknipe/menupin)
 [![Platform](https://img.shields.io/badge/EPiServer-%209.0.+-orange.svg?style=flat)](http://world.episerver.com/cms/)
 
 MenuPin for EPiServer
