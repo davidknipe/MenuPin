@@ -11,4 +11,4 @@ More information:
 - EPiServer 8: http://www.david-tec.com/2015/03/menupin-for-episerver-8-released/
 - EPiServer 7.5: http://www.david-tec.com/2014/06/MenuPin-for-EPiServer-75/
 
-**Note!** If you are using MenuPin with other Dojo modules then you should read this post about using multiple module initialisers: [http://marisks.net/2016/08/08/registering-multiple-dojo-modules/]
+**Note!** If you are using MenuPin with other Dojo modules then you should read this post about using multiple module initialisers: http://marisks.net/2016/08/08/registering-multiple-dojo-modules/
