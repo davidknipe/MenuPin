@@ -1,4 +1,4 @@
-[![Platform](https://img.shields.io/badge/EPiServer-%209.0.+-orange.svg?style=flat)](http://world.episerver.com/cms/)
+[![Platform](https://img.shields.io/badge/Episerver-%209.0.+-orange.svg?style=flat)](http://world.episerver.com/cms/)
 
 MenuPin for EPiServer
 =====================
