@@ -10,7 +10,7 @@ namespace MenuPin.MenuProvider
         public IEnumerable<MenuItem> GetMenuItems()
         {
             var pinMenuItemCms = new UrlMenuItem(
-                            "<span class=\"epi-iconPin menuPinButton\"></span>", 
+                            "<span class=\"epi-iconPin menuPinButton\"></span>",
                             "/global/cms/edit",
                             "javascript: return;"
                             );
