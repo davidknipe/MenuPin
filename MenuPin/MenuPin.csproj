@@ -171,7 +171,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="module.config.transform" />
+    <None Include="module.config" />
     <None Include="modules\_protected\CMS\CMS.zip" />
     <None Include="modules\_protected\CMS\EPiServer.Cms.Shell.UI.zip" />
     <None Include="modules\_protected\Shell\EPiServer.Shell.UI.zip" />
