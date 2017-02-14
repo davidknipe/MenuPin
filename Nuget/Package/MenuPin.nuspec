@@ -4,8 +4,8 @@
     <id>MenuPin</id>
     <title>MenuPin</title>
     <description>MenuPin for EPiServer 10 - Pin the top menu in edit mode</description>
-    <releaseNotes>v4.0.0 Adds support for Episerver 10</releaseNotes>
-    <version>4.0.0</version>
+    <releaseNotes>v10.0.0 Packages as a stand alone addon and fixes a bug affecting views without a menu</releaseNotes>
+    <version>10.0.0</version>
     <authors>David Knipe</authors>
     <owners>David Knipe</owners>
     <licenseUrl>https://github.com/davidknipe/MenuPin/blob/master/LICENSE.md</licenseUrl>
