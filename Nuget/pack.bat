@@ -10,6 +10,7 @@ md Package\content\modules\_protected\MenuPin\ClientResources\Scripts\MenuPin\
 @Echo Copying new files
 copy ..\MenuPin\bin\Release\MenuPin.dll Package\lib\net45\
 copy ..\MenuPin\ClientResources\Scripts\MenuPin\MenuPinInit.js Package\content\modules\_protected\MenuPin\ClientResources\Scripts\MenuPin\
+copy ..\MenuPin\ClientResources\Scripts\MenuPin\MenuPinForFind.js Package\content\modules\_protected\MenuPin\ClientResources\Scripts\MenuPin\
 copy ..\MenuPin\module.config Package\content\modules\_protected\MenuPin\
 
 @Echo Packing files
