@@ -4,8 +4,8 @@
     <id>MenuPin</id>
     <title>MenuPin</title>
     <description>MenuPin for Episerver 10 - Pin the top menu in edit mode</description>
-    <releaseNotes>v10.1.3 Fixes an issue that occasionally stops the menu from staying pinned due to initialisation being called multiple times</releaseNotes>
-    <version>10.1.3</version>
+    <releaseNotes>v10.1.4 Roll back v10.1.3 until more testing takes place</releaseNotes>
+    <version>10.1.4</version>
     <authors>David Knipe</authors>
     <owners>David Knipe</owners>
     <licenseUrl>https://github.com/davidknipe/MenuPin/blob/master/LICENSE.md</licenseUrl>
