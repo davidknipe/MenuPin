@@ -1,5 +1,6 @@
 ﻿using System.Web.Mvc;
-using EPiServer.Configuration;
+using EPiServer.Framework.Modules;
+using EPiServer.ServiceLocation;
 
 namespace MenuPin.Attributes
 {
@@ -7,17 +8,8 @@ namespace MenuPin.Attributes
     {
         protected override string Process(string data)
         {
-            string epiUrlSegment;
-            if (Settings.Instance.UIUrl.IsAbsoluteUri)
-            {
-                epiUrlSegment = Settings.Instance.UIUrl.Segments[1].TrimEnd("/".ToCharArray());
-            }
-            else
-            {
-                epiUrlSegment = Settings.Instance.UIUrl.OriginalString.TrimStart("~/".ToCharArray()).TrimEnd("/CMS".ToCharArray());
-            }
-
-            var menuPinUrl = "/" + epiUrlSegment + "/MenuPin/ClientResources/Scripts/MenuPin/MenuPinForFind.js";
+            var moduleResourceResolver = ServiceLocator.Current.GetInstance<IModuleResourceResolver>();
+            var menuPinUrl = moduleResourceResolver.ResolveClientPath("MenuPin", "Scripts/MenuPin/MenuPinForFind.js");
 
             return data
                 .Replace("\"dojo/parser\"", "\"dojo/parser\" ,\"" + menuPinUrl + "\"")
