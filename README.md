@@ -3,8 +3,14 @@
 [![Platform](https://img.shields.io/badge/Episerver-%209.0.+-orange.svg?style=flat)](http://world.episerver.com/cms/)
 [![Platform](https://img.shields.io/badge/Episerver-%2010.0.+-orange.svg?style=flat)](http://world.episerver.com/cms/)
 
-MenuPin for EPiServer
+MenuPin for Episerver
 =====================
+
+**As of version v11.2 of the Episerver UI this is now a core feature**
+
+See here for more details: https://world.episerver.com/blogs/David-Knipe/Dates/2017/12/pin-the-top-menu-in-the-episerver-ui/
+
+---------------------------------------------------------
 
 MenuPin for Episerver 7.5, Episerver 8, Episerver 9 and Episerver 10
 
