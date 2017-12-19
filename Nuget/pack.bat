@@ -3,12 +3,12 @@ del Package\lib /s /q
 del Package\content /s /q
 
 @Echo Setting up folder structure
-md Package\lib\net45\
+md Package\lib\net462\
 md Package\tools\
 md Package\content\modules\_protected\MenuPin\ClientResources\Scripts\MenuPin\
 
 @Echo Copying new files
-copy ..\MenuPin\bin\Release\MenuPin.dll Package\lib\net45\
+copy ..\MenuPin\bin\Release\MenuPin.dll Package\lib\net462\
 copy ..\MenuPin\ClientResources\Scripts\MenuPin\MenuPinInit.js Package\content\modules\_protected\MenuPin\ClientResources\Scripts\MenuPin\
 copy ..\MenuPin\ClientResources\Scripts\MenuPin\MenuPinForFind.js Package\content\modules\_protected\MenuPin\ClientResources\Scripts\MenuPin\
 copy ..\MenuPin\module.config Package\content\modules\_protected\MenuPin\
